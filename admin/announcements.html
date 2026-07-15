@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | Announcements</title>
+
+<link rel="stylesheet" href="css/announcements.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Admin Panel</p>
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa fa-home"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+            <li>
+                <a href="users.html">
+                    <i class="fa-solid fa-user"></i>
+                    User Management
+                </a>
+            </li>
+
+ <li >
+
+
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa fa-bullhorn"></i>
+
+Announcements
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="students.html">
+
+<i class="fa fa-users"></i>
+
+Students
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="teachers.html">
+
+<i class="fa fa-chalkboard-teacher"></i>
+
+Teachers
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="#" onclick="logout()">
+
+<i class="fa fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<!-- MAIN -->
+
+
+<div class="main">
+
+
+
+<div class="header">
+
+<h2>
+
+Create Announcement
+
+</h2>
+
+<p id="clock"></p>
+
+</div>
+
+
+
+
+
+
+
+<!-- FORM -->
+
+
+<div class="announcement-form">
+
+
+<h2>
+
+New Announcement
+
+</h2>
+
+
+
+<input
+
+type="text"
+
+id="title"
+
+placeholder="Announcement Title">
+
+
+
+
+
+<textarea
+
+id="message"
+
+placeholder="Write announcement here...">
+
+</textarea>
+
+
+
+
+<button onclick="addAnnouncement()">
+
+<i class="fa fa-paper-plane"></i>
+
+Publish
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- LIST -->
+
+
+<div class="announcement-list">
+
+
+<h2>
+
+Published Announcements
+
+</h2>
+
+
+
+<div id="announcementList">
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<footer>
+
+© 2026 SOM ACADEMY Admin Panel
+
+</footer>
+
+
+
+</div>
+
+
+
+
+
+<script src="js/announcements.js"></script>
+
+
+</body>
+
+</html>

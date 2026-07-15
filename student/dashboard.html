@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | Student Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+
+<div class="brand">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Student Portal</p>
+
+</div>
+
+
+
+<ul>
+
+
+<li class="active">
+
+<a href="dashboard.html">
+
+<i class="fa fa-home"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="profile.html">
+
+<i class="fa fa-user"></i>
+
+My Profile
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="attendance.html">
+
+<i class="fa fa-calendar-check"></i>
+
+Attendance
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="results.html">
+
+<i class="fa fa-graduation-cap"></i>
+
+Results
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="fees.html">
+
+<i class="fa fa-wallet"></i>
+
+Fees
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="#" onclick="logout()">
+
+<i class="fa fa-sign-out"></i>
+
+Logout
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Main -->
+
+
+<div class="main">
+
+
+
+<!-- Header -->
+
+
+<div class="header">
+
+
+<div>
+
+<h2>Student Dashboard</h2>
+
+<p id="clock"></p>
+
+</div>
+
+
+
+<div class="user-box">
+
+
+<img id="topPhoto"
+src="../images/avatar.png">
+
+
+<div>
+
+<h4 id="topName">
+
+Student
+
+</h4>
+
+
+<p>
+
+Online
+
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Welcome -->
+
+
+<div class="welcome">
+
+
+<div>
+
+<h1>
+
+Welcome Back,
+
+<span id="studentName">
+
+Student
+
+</span>
+
+</h1>
+
+
+<p>
+
+Continue your learning journey with SOM ACADEMY
+
+</p>
+
+
+</div>
+
+
+
+<i class="fa fa-graduation-cap"></i>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Statistics -->
+
+
+<div class="stats">
+
+
+<div class="stat-card">
+
+
+<i class="fa fa-calendar-check"></i>
+
+
+<div>
+
+<h3>Attendance</h3>
+
+<h1 id="attendance">
+
+95%
+
+</h1>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+
+<i class="fa fa-file-lines"></i>
+
+
+<div>
+
+<h3>Results</h3>
+
+<h1 id="results">
+
+5
+
+</h1>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="stat-card">
+
+
+<i class="fa fa-wallet"></i>
+
+
+<div>
+
+<h3>Fees Status</h3>
+
+<h1 id="fees">
+
+Paid
+
+</h1>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="stat-card">
+
+
+<i class="fa fa-ranking-star"></i>
+
+
+<div>
+
+<h3>Class Rank</h3>
+
+<h1 id="rank">
+
+1
+
+</h1>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Middle Section -->
+
+
+<div class="content-grid">
+
+
+
+
+
+<div class="panel">
+
+
+<h2>
+
+Recent Results
+
+</h2>
+
+
+<table>
+
+
+<tr>
+
+<th>Subject</th>
+
+<th>Mark</th>
+
+<th>Grade</th>
+
+</tr>
+
+
+<tbody id="resultTable">
+
+
+<tr>
+
+<td>Mathematics</td>
+
+<td>90</td>
+
+<td>A</td>
+
+</tr>
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="panel">
+
+
+<h2>
+
+Announcements
+
+</h2>
+
+
+<div id="notifications">
+
+
+<p>
+
+📢 Welcome to new semester
+
+</p>
+
+
+<p>
+
+📢 Exams start next month
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Quick Actions -->
+
+
+<div class="quick">
+
+
+<h2>
+
+Quick Actions
+
+</h2>
+
+
+
+<a href="profile.html">
+
+<i class="fa fa-user"></i>
+
+Edit Profile
+
+</a>
+
+
+<a href="results.html">
+
+<i class="fa fa-file"></i>
+
+View Results
+
+</a>
+
+
+
+<a href="attendance.html">
+
+<i class="fa fa-calendar"></i>
+
+Attendance
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<footer>
+
+
+© 2026 SOM ACADEMY  System
+
+
+</footer>
+
+
+
+</div>
+
+
+
+
+
+<script src="js/dashboard.js"></script>
+
+
+</body>
+
+</html>

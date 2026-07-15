@@ -1,0 +1,336 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+
+display:flex;
+background:#eef2f7;
+
+}
+
+
+
+/* ================= SIDEBAR ================= */
+
+
+.sidebar{
+
+width:260px;
+height:100vh;
+background:#1f4c7c;
+position:fixed;
+left:0;
+top:0;
+overflow:auto;
+
+}
+
+
+
+.brand{
+
+padding:25px;
+text-align:center;
+color:white;
+border-bottom:1px solid rgba(255,255,255,.2);
+
+}
+
+
+
+.brand h2{
+
+font-size:26px;
+
+}
+
+
+
+.brand p{
+
+margin-top:8px;
+
+}
+
+
+
+
+.sidebar ul{
+
+list-style:none;
+padding:20px 0;
+
+}
+
+
+
+.sidebar ul li{
+
+margin:8px 15px;
+
+}
+
+
+
+.sidebar ul li a{
+
+display:flex;
+align-items:center;
+gap:15px;
+padding:14px;
+color:white;
+text-decoration:none;
+border-radius:8px;
+transition:.3s;
+
+}
+
+
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a{
+
+background:#163858;
+
+}
+
+
+
+
+
+
+
+/* ================= MAIN ================= */
+
+
+.main{
+
+margin-left:260px;
+width:calc(100% - 260px);
+padding:20px;
+
+}
+
+
+
+
+
+/* ================= HEADER ================= */
+
+
+.header{
+
+background:white;
+padding:20px;
+border-radius:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+margin-bottom:30px;
+
+}
+
+
+
+.header h2{
+
+color:#1f4c7c;
+
+}
+
+
+
+
+
+
+
+/* ================= PROFILE ================= */
+
+
+.profile-box{
+
+background:white;
+width:600px;
+margin:auto;
+padding:35px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+
+
+.profile-box img{
+
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #1f4c7c;
+margin-bottom:20px;
+
+}
+
+
+
+
+.profile-box h2{
+
+color:#1f4c7c;
+margin-bottom:20px;
+
+}
+
+
+
+
+.profile-box input[type="file"]{
+
+margin-bottom:25px;
+
+}
+
+
+
+
+.form{
+
+text-align:left;
+
+}
+
+
+
+.form label{
+
+display:block;
+margin-top:15px;
+margin-bottom:7px;
+font-weight:bold;
+color:#444;
+
+}
+
+
+
+
+.form input{
+
+width:100%;
+padding:13px;
+border:1px solid #ddd;
+border-radius:8px;
+outline:none;
+
+}
+
+
+
+
+.form input:focus{
+
+border-color:#1f4c7c;
+
+}
+
+
+
+
+
+button{
+
+margin-top:25px;
+width:100%;
+padding:14px;
+background:#1f4c7c;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+background:#163858;
+
+}
+
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer{
+
+text-align:center;
+padding:25px;
+margin-top:30px;
+color:#666;
+
+}
+
+
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:900px){
+
+
+
+.sidebar{
+
+width:80px;
+
+}
+
+
+
+.brand h2,
+.brand p,
+.sidebar a{
+
+font-size:0;
+
+}
+
+
+
+
+.main{
+
+margin-left:80px;
+width:calc(100% - 80px);
+
+}
+
+
+
+
+.profile-box{
+
+width:100%;
+
+}
+
+
+
+}

@@ -1,0 +1,139 @@
+/* ======================================
+   SOM ACADEMY SIMPLE PROFILE
+====================================== */
+
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+
+body{
+
+background:#eef2f7;
+
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+
+}
+
+
+
+
+.profile-box{
+
+background:white;
+width:400px;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+}
+
+
+
+.profile-box h2{
+
+text-align:center;
+color:#1f4c7c;
+margin-bottom:25px;
+
+}
+
+
+
+
+.photo-box{
+
+text-align:center;
+margin-bottom:25px;
+
+}
+
+
+
+.photo-box img{
+
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #1f4c7c;
+
+}
+
+
+
+
+.photo-box input{
+
+margin-top:15px;
+
+}
+
+
+
+
+
+.form-box label{
+
+display:block;
+margin-bottom:8px;
+font-weight:bold;
+color:#333;
+
+}
+
+
+
+.form-box input{
+
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+margin-bottom:20px;
+outline:none;
+
+}
+
+
+
+
+.form-box input:focus{
+
+border-color:#1f4c7c;
+
+}
+
+
+
+
+button{
+
+width:100%;
+padding:13px;
+background:#1f4c7c;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+
+}
+
+
+
+button:hover{
+
+background:#163858;
+
+}

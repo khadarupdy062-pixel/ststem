@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | Teacher Schedule</title>
+
+<link rel="stylesheet" href="css/schedule.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+
+<div class="sidebar">
+
+
+<div class="brand">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Teacher Panel</p>
+
+</div>
+
+
+
+
+<ul>
+
+
+<li>
+<a href="dashboard.html">
+
+<i class="fa fa-home"></i>
+
+Dashboard
+
+</a>
+</li>
+
+
+
+<li>
+<a href="profile.html">
+
+<i class="fa fa-user"></i>
+
+Profile
+
+</a>
+</li>
+
+
+
+<li>
+<a href="students.html">
+
+<i class="fa fa-users"></i>
+
+Students
+
+</a>
+</li>
+
+
+
+<li>
+<a href="attendance.html">
+
+<i class="fa fa-calendar-check"></i>
+
+Attendance
+
+</a>
+</li>
+
+
+
+
+<li>
+<a href="exams.html">
+
+<i class="fa fa-file"></i>
+
+Exams
+
+</a>
+</li>
+
+
+
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa fa-calendar"></i>
+
+Schedule
+
+</a>
+
+</li>
+
+
+
+
+<li>
+<a href="messages.html">
+
+<i class="fa fa-envelope"></i>
+
+Messages
+
+</a>
+</li>
+
+
+
+<li>
+
+<a href="#" onclick="logout()">
+
+<i class="fa fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="main">
+
+
+
+<div class="header">
+
+<h2>Teacher Schedule</h2>
+
+<p id="clock"></p>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="form-box">
+
+
+<h2>Add Class Schedule</h2>
+
+
+
+<div class="grid">
+
+
+<input 
+type="text"
+id="day"
+placeholder="Day">
+
+
+
+<input
+type="text"
+id="subject"
+placeholder="Subject">
+
+
+
+<input
+type="text"
+id="className"
+placeholder="Class">
+
+
+
+<input
+type="time"
+id="time">
+
+
+
+
+<button onclick="saveSchedule()">
+
+<i class="fa fa-save"></i>
+
+Save
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="table-box">
+
+
+<h2>My Schedule</h2>
+
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+
+<th>Day</th>
+
+<th>Subject</th>
+
+<th>Class</th>
+
+<th>Time</th>
+
+<th>Action</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody id="scheduleTable">
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<footer>
+
+© 2026 SOM ACADEMY Teacher Portal
+
+</footer>
+
+
+
+</div>
+
+
+
+
+
+
+<script src="js/schedule.js"></script>
+
+
+</body>
+
+</html>

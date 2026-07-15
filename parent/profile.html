@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | Parent Profile</title>
+
+<link rel="stylesheet" href="css/profile.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= Sidebar ================= -->
+
+<div class="sidebar">
+
+<div class="brand">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Parent Portal</p>
+
+</div>
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+<i class="fa fa-home"></i>
+Dashboard
+</a>
+</li>
+
+<li class="active">
+<a href="profile.html">
+<i class="fa fa-user"></i>
+My Profile
+</a>
+</li>
+
+
+
+
+
+<li>
+<a href="child.html">
+<i class="fa fa-child"></i>
+My Child
+</a>
+</li>
+
+<li>
+<a href="attendance.html">
+<i class="fa fa-calendar-check"></i>
+Attendance
+</a>
+</li>
+
+<li>
+<a href="results.html">
+<i class="fa fa-graduation-cap"></i>
+Results
+</a>
+</li>
+
+<li>
+<a href="fees.html">
+<i class="fa fa-wallet"></i>
+Fees
+</a>
+</li>
+
+<li>
+<a href="messages.html">
+<i class="fa fa-envelope"></i>
+Messages
+</a>
+</li>
+
+<li>
+<a href="#" onclick="logout()">
+<i class="fa fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<!-- ================= Main ================= -->
+
+<div class="main">
+
+<div class="header">
+
+<h2>My Profile</h2>
+
+<p id="clock"></p>
+
+</div>
+
+<div class="profile-card">
+
+<img
+id="parentPhoto"
+src="../images/avatar.png"
+class="photo">
+
+<input
+type="file"
+id="photoInput"
+accept="image/*"
+hidden>
+
+<button
+type="button"
+onclick="document.getElementById('photoInput').click()">
+
+<i class="fa fa-camera"></i>
+
+Change Photo
+
+</button>
+
+<input
+type="text"
+id="parentName"
+placeholder="Parent Name">
+
+<button
+type="button"
+onclick="saveProfile()">
+
+<i class="fa fa-save"></i>
+
+Save Changes
+
+</button>
+
+</div>
+
+<footer>
+
+© 2026 SOM ACADEMY Parent Portal
+
+</footer>
+
+</div>
+
+<script src="js/profile.js"></script>
+
+</body>
+
+</html>

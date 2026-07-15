@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | Teacher Profile</title>
+
+<link rel="stylesheet" href="css/profile.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="sidebar">
+
+
+<div class="brand">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Teacher Portal</p>
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa fa-home"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa fa-user"></i>
+
+My Profile
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="students.html">
+
+<i class="fa fa-users"></i>
+
+Students
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="attendance.html">
+
+<i class="fa fa-calendar-check"></i>
+
+Attendance
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="exams.html">
+
+<i class="fa fa-file"></i>
+
+Exams
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="#" onclick="logout()">
+
+<i class="fa fa-sign-out"></i>
+
+Logout
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div class="main">
+
+
+
+<div class="header">
+
+
+<h2>Teacher Profile</h2>
+
+
+<p id="clock"></p>
+
+
+</div>
+
+
+
+
+
+
+<div class="profile-box">
+
+
+
+<img id="teacherPhoto"
+src="../images/avatar.png">
+
+
+
+<h2 id="teacherName">
+
+Teacher Name
+
+</h2>
+
+
+
+<input 
+type="file"
+id="photoInput"
+accept="image/*">
+
+
+
+
+
+<div class="form">
+
+
+<label>Name</label>
+
+<input 
+id="name"
+placeholder="Teacher Name">
+
+
+
+
+
+<label>Email</label>
+
+<input 
+id="email"
+readonly>
+
+
+
+
+
+
+<button onclick="saveProfile()">
+
+<i class="fa fa-save"></i>
+
+Save Changes
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<footer>
+
+© 2026 SOM ACADEMY Teacher Portal
+
+</footer>
+
+
+
+</div>
+
+
+
+
+<script src="js/profile.js"></script>
+
+
+</body>
+
+</html>

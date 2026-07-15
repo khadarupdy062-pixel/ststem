@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | Student List</title>
+
+<link rel="stylesheet" href="css/student-list.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Admin Panel</p>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa fa-gauge"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="students.html">
+
+<i class="fa fa-user-plus"></i>
+
+Student Management
+
+</a>
+
+</li>
+
+<li>
+<a href="teachers.html">
+<i class="fa-solid fa-chalkboard-user"></i>
+Teacher Management
+</a>
+</li>
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+Student List
+
+</a>
+
+</li>
+
+<li>
+<a href="teacher-list.html">
+<i class="fa-solid fa-chalkboard-user"></i>
+ Teacher List
+</a>
+</li>
+
+<li>
+<a href="classes.html">
+<i class="fa-solid fa-school"></i>
+Classes
+</a>
+</li>
+
+<li>
+<a href="attendance.html">
+<i class="fa-solid fa-calendar-check"></i>
+Attendance
+</a>
+</li>
+
+<li>
+<a href="exams.html">
+<i class="fa-solid fa-file-lines"></i>
+Exams
+</a>
+</li>
+
+<li>
+<a href="fees.html">
+<i class="fa-solid fa-money-bill-wave"></i>
+Fees
+</a>
+</li>
+
+<li>
+<a href="reports.html">
+<i class="fa-solid fa-chart-line"></i>
+Reports
+</a>
+</li>
+
+            <li>
+                <a href="users.html">
+                    <i class="fa-solid fa-user"></i>
+                    User Management
+                </a>
+            </li>
+
+ <li >
+
+<a href="#">
+
+<i class="fa fa-bullhorn"></i>
+
+Announcements
+
+</a>
+
+</li>
+
+<li>
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+</li>
+
+<li>
+<a href="#" onclick="logout()">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+<div class="navbar">
+
+<h2>Students List</h2>
+
+<p id="clock"></p>
+
+</div>
+
+<div class="top-bar">
+
+<input
+type="text"
+id="search"
+placeholder="Search Student...">
+
+<button id="printBtn">
+
+<i class="fa fa-print"></i>
+
+Print
+
+</button>
+
+<button id="pdfBtn">
+
+<i class="fa fa-file-pdf"></i>
+
+PDF
+
+</button>
+
+<button id="excelBtn">
+
+<i class="fa fa-file-excel"></i>
+
+Excel
+
+</button>
+
+</div>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Photo</th>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Age</th>
+
+<th>Gender</th>
+
+<th>Class</th>
+
+<th>Parent</th>
+
+<th>Phone</th>
+
+<th>Email</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="studentList">
+
+<!-- Data From LocalStorage -->
+
+</tbody>
+
+</table>
+
+</div><!-- ========================= -->
+<!-- Statistics -->
+<!-- ========================= -->
+
+<div class="stats">
+
+<div class="card">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+<h3>Total Students</h3>
+
+<h1 id="totalStudents">0</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-mars"></i>
+
+<h3>Male Students</h3>
+
+<h1 id="maleStudents">0</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-venus"></i>
+
+<h3>Female Students</h3>
+
+<h1 id="femaleStudents">0</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-user-check"></i>
+
+<h3>Active Students</h3>
+
+<h1 id="activeStudents">0</h1>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- Footer -->
+<!-- ========================= -->
+
+<footer>
+
+<p>
+
+© 2026 SOM ACADEMY School Management System
+
+</p>
+
+</footer>
+
+</div>
+
+<script src="js/student-list.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | Results</title>
+
+<link rel="stylesheet" href="css/results.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Parent Portal</p>
+
+</div>
+
+
+<ul>
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa fa-home"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+<a href="profile.html">
+<i class="fa fa-user"></i>
+My Profile
+</a>
+</li>
+
+
+<li>
+
+<a href="child.html">
+
+<i class="fa fa-child"></i>
+
+My Child
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="attendance.html">
+
+<i class="fa fa-calendar-check"></i>
+
+Attendance
+
+</a>
+
+</li>
+
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa fa-graduation-cap"></i>
+
+Results
+
+</a>
+
+</li>
+
+
+
+<li>
+<a href="fees.html">
+<i class="fa fa-wallet"></i>
+Fees
+</a>
+</li>
+
+<li>
+<a href="messages.html">
+<i class="fa fa-envelope"></i>
+Messages
+</a>
+</li>
+
+<li>
+<a href="#" onclick="logout()">
+<i class="fa fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+
+</ul>
+
+</div>
+
+
+
+<!-- MAIN -->
+
+
+<div class="main">
+
+
+<div class="header">
+
+<h2>Student Results</h2>
+
+<p id="clock"></p>
+
+</div>
+
+
+
+<!-- SEARCH -->
+
+<div class="search-card">
+
+
+<h3>
+
+Search Student Result
+
+</h3>
+
+
+<div class="search-box">
+
+
+<input
+
+type="text"
+
+id="search"
+
+placeholder="Enter Student ID">
+
+
+<button onclick="searchResult()">
+
+<i class="fa fa-search"></i>
+
+Search
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- STUDENT INFO -->
+
+
+<div class="student-card">
+
+
+<img
+
+id="studentPhoto"
+
+src="../images/avatar.png">
+
+
+
+<h2 id="studentName">
+
+Student Name
+
+</h2>
+
+
+<p id="studentClass">
+
+Class
+
+</p>
+
+
+</div>
+
+
+
+
+
+<!-- RESULTS TABLE -->
+
+
+<div class="table-box">
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>Subject</th>
+
+<th>Exam</th>
+
+<th>Mark</th>
+
+<th>Grade</th>
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="resultTable">
+
+
+<tr>
+
+<td colspan="4">
+
+Search Student ID First
+
+</td>
+
+</tr>
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+<footer>
+
+© 2026 SOM ACADEMY Parent Portal
+
+</footer>
+
+
+
+</div>
+
+
+
+<script src="js/results.js"></script>
+
+
+</body>
+
+</html>

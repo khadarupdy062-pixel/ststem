@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SOM ACADEMY | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ===================== -->
+    <!-- Sidebar -->
+    <!-- ===================== -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+
+            <h2>SOM ACADEMY</h2>
+
+            <p>Admin Panel</p>
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <a href="#">
+                    <i class="fa-solid fa-gauge"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="students.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Student Management
+                </a>
+            </li>
+
+            <li>
+                <a href="teachers.html">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    Teacher Management
+                </a>
+            </li>
+
+
+            <li>
+                <a href="student-list.html">
+                    <i class="fa-solid fa-users"></i>
+                    Student List
+                </a>
+            </li>
+
+            <li>
+                <a href="teacher-list.html">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    Teacher List
+                </a>
+            </li>
+
+
+
+            <li>
+                <a href="classes.html">
+                    <i class="fa-solid fa-school"></i>
+                    Classes
+                </a>
+            </li>
+
+            <li>
+                <a href="attendance.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Attendance
+                </a>
+            </li>
+
+            <li>
+                <a href="exams.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Exams
+                </a>
+            </li>
+
+            <li>
+                <a href="fees.html">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    Fees
+                </a>
+            </li>
+
+            <li>
+                <a href="reports.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Reports
+                </a>
+            </li>
+            <li>
+                <a href="users.html">
+                    <i class="fa-solid fa-user"></i>
+                    User Management
+                </a>
+            </li>
+
+ <li >
+
+<a href="#">
+
+<i class="fa fa-bullhorn"></i>
+
+Announcements
+
+</a>
+
+</li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- ===================== -->
+    <!-- Main -->
+    <!-- ===================== -->
+
+    <div class="main">
+
+        <!-- Navbar -->
+
+        <div class="navbar">
+
+
+            <div>
+
+
+
+                <h2>Dashboard</h2>
+
+                <p>Welcome Back Admin</p>
+
+            </div>
+            <p id="clock"></p>
+            <div class="profile">
+
+                <img src="https://i.pravatar.cc/45" alt="Admin">
+
+                <span>Administrator</span>
+
+            </div>
+
+        </div>
+
+        <!-- Dashboard Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+                <h3>Total Students</h3>
+
+                <h1 id="students">0</h1>
+
+            </div>
+
+            <div class="card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+
+                <div class="info">
+                    <h3>Total Teachers</h3>
+                    <h1 id="teachers">0</h1>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+
+
+                <i class="fa-solid fa-school"></i>
+
+                <h3>Total Classes</h3>
+
+                <h1>12</h1>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-money-bill"></i>
+
+                <h3>Monthly Fees</h3>
+
+                <h1>$12,500</h1>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Actions -->
+
+        <h2>Quick Actions</h2>
+
+        <div class="quick-actions">
+            <div class="dashboard-links">
+
+
+            </div>
+
+
+
+            <div class="actions">
+
+
+                <a href="students.html" class="action">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    <span>Add Student</span>
+
+                </a>
+
+                <a href="teachers.html" class="action">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    <span>Add Teacher</span>
+
+                </a>
+
+                <a href="attendance.html" class="action">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <span>Attendance</span>
+
+                </a>
+
+                <a href="fees.html" class="action">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                    <span>Fees</span>
+
+                </a>
+
+                <a href="reports.html" class="action">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    View Reports
+
+                </a>
+
+            </div>
+
+        </div><!-- ===================== -->
+        <!-- Recent Students -->
+        <!-- ===================== -->
+
+        <div class="table-section">
+
+            <div class="table-header">
+
+                <h2>Recent Students</h2>
+
+                <a href="student-list.html" class="view-all">
+                    View All
+                </a>
+
+            </div>
+
+            <table>
+
+                <tbody id="recentStudents">
+
+                    <!-- Students will load automatically -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ===================== -->
+        <!-- Dashboard Bottom -->
+        <!-- ===================== -->
+
+        <div class="dashboard-grid">
+
+            <div class="box">
+
+                <h2>Announcements</h2>
+
+                <ul>
+
+                    <li>📢 Mid-Term Exams start next week.</li>
+
+                    <li>📢 School Fees deadline: 25 July.</li>
+
+                    <li>📢 Parent Meeting on Friday.</li>
+
+                    <li>📢 New Students Registration Open.</li>
+
+                </ul>
+
+            </div>
+
+            <div class="box">
+
+                <h2>School Statistics</h2>
+
+                <p>Total Students : <strong>520</strong></p>
+
+                <p>Total Teachers : <strong>25</strong></p>
+
+                <p>Total Classes : <strong>12</strong></p>
+
+                <p>Attendance Today : <strong>498</strong></p>
+
+                <p>Monthly Income : <strong>$12,500</strong></p>
+
+            </div>
+
+        </div>
+
+        <!-- ===================== -->
+        <!-- Footer -->
+        <!-- ===================== -->
+
+        <footer>
+
+            <p>
+
+                © 2026 SOM ACADEMY School Management System
+
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>

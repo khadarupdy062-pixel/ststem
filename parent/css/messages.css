@@ -1,0 +1,288 @@
+/* ======================================
+   SOM ACADEMY PARENT MESSAGES
+====================================== */
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+
+body{
+
+display:flex;
+background:#eef2f7;
+
+}
+
+
+
+/* ================= SIDEBAR ================= */
+
+
+.sidebar{
+
+width:260px;
+height:100vh;
+background:#1f4c7c;
+position:fixed;
+left:0;
+top:0;
+overflow:auto;
+
+}
+
+
+
+.logo{
+
+padding:25px;
+text-align:center;
+color:white;
+border-bottom:1px solid rgba(255,255,255,.2);
+
+}
+
+
+
+.logo h2{
+
+font-size:26px;
+
+}
+
+
+
+.logo p{
+
+font-size:14px;
+margin-top:8px;
+
+}
+
+
+
+.sidebar ul{
+
+list-style:none;
+padding:20px 0;
+
+}
+
+
+
+.sidebar ul li{
+
+margin:8px 15px;
+
+}
+
+
+
+.sidebar ul li a{
+
+display:flex;
+align-items:center;
+gap:15px;
+padding:14px;
+text-decoration:none;
+color:white;
+border-radius:8px;
+transition:.3s;
+
+}
+
+
+
+.sidebar ul li.active a,
+.sidebar ul li a:hover{
+
+background:#163858;
+
+}
+
+
+
+
+
+
+/* ================= MAIN ================= */
+
+
+.main{
+
+margin-left:260px;
+width:calc(100% - 260px);
+padding:25px;
+
+}
+
+
+
+
+
+/* ================= HEADER ================= */
+
+
+.header{
+
+background:white;
+padding:20px;
+border-radius:12px;
+margin-bottom:25px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+
+
+.header h2{
+
+color:#1f4c7c;
+
+}
+
+
+
+
+
+
+/* ================= MESSAGES ================= */
+
+
+.message-box{
+
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+
+
+.message-box h2{
+
+color:#1f4c7c;
+margin-bottom:20px;
+
+}
+
+
+
+
+
+.message-card{
+
+background:#f8fafc;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+border-left:5px solid #1f4c7c;
+
+}
+
+
+
+.message-card h3{
+
+color:#1f4c7c;
+margin-bottom:10px;
+
+}
+
+
+
+.message-card p{
+
+color:#555;
+line-height:1.6;
+
+}
+
+
+
+.message-card span{
+
+display:block;
+margin-top:15px;
+font-size:13px;
+color:#777;
+
+}
+
+
+
+
+
+/* EMPTY MESSAGE */
+
+
+.empty{
+
+text-align:center;
+padding:40px;
+color:#777;
+
+}
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer{
+
+text-align:center;
+padding:30px;
+color:#666;
+
+}
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:900px){
+
+
+.sidebar{
+
+width:80px;
+
+}
+
+
+.logo h2,
+.logo p,
+.sidebar a{
+
+font-size:0;
+
+}
+
+
+.sidebar i{
+
+font-size:20px;
+
+}
+
+
+.main{
+
+margin-left:80px;
+width:calc(100% - 80px);
+
+}
+
+
+}

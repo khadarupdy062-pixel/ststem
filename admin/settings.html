@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | Settings</title>
+
+<link rel="stylesheet" href="css/settings.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Admin Panel</p>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa fa-gauge"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+            <li>
+                <a href="students.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Student Management
+                </a>
+            </li>
+
+            <li>
+                <a href="teachers.html">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    Teacher Management
+                </a>
+            </li>
+
+
+            <li>
+                <a href="student-list.html">
+                    <i class="fa-solid fa-users"></i>
+                    Student List
+                </a>
+            </li>
+
+            <li>
+                <a href="teacher-list.html">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    Teacher List
+                </a>
+            </li>
+
+
+
+            <li>
+                <a href="classes.html">
+                    <i class="fa-solid fa-school"></i>
+                    Classes
+                </a>
+            </li>
+
+            <li>
+                <a href="attendance.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Attendance
+                </a>
+            </li>
+
+            <li>
+                <a href="exams.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Exams
+                </a>
+            </li>
+
+            <li>
+                <a href="fees.html">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    Fees
+                </a>
+            </li>
+
+            <li>
+                <a href="reports.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Reports
+                </a>
+            </li>
+
+                        <li>
+                <a href="users.html">
+                    <i class="fa-solid fa-user"></i>
+                    User Management
+                </a>
+            </li>
+
+ <li >
+
+<a href="#">
+
+<i class="fa fa-bullhorn"></i>
+
+Announcements
+
+</a>
+
+</li>
+
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</a>
+
+</li>
+
+<li>
+
+<a href="../index.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<h2>System Settings</h2>
+
+<p id="clock"></p>
+
+</div>
+
+<!-- SCHOOL INFORMATION -->
+
+<div class="settings-box">
+
+<h2>
+
+<i class="fa-solid fa-school"></i>
+
+School Information
+
+</h2>
+
+<div class="grid">
+
+<input
+type="text"
+id="schoolName"
+placeholder="School Name">
+
+<input
+type="text"
+id="schoolAddress"
+placeholder="School Address">
+
+<input
+type="text"
+id="schoolPhone"
+placeholder="School Phone">
+
+<input
+type="email"
+id="schoolEmail"
+placeholder="School Email">
+
+<input
+type="file"
+id="schoolLogo"
+accept="image/*">
+
+<button onclick="saveSchoolInfo()">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Information
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ADMIN ACCOUNT -->
+
+<div class="settings-box">
+
+<h2>
+
+<i class="fa-solid fa-user-shield"></i>
+
+Admin Account
+
+</h2>
+
+<div class="grid">
+
+<input
+type="text"
+id="adminUsername"
+placeholder="Username">
+
+<input
+type="password"
+id="oldPassword"
+placeholder="Current Password">
+
+<input
+type="password"
+id="newPassword"
+placeholder="New Password">
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm Password">
+
+<button onclick="changePassword()">
+
+<i class="fa-solid fa-key"></i>
+
+Change Password
+
+</button>
+
+</div>
+
+</div>
+
+<!-- DATA MANAGEMENT -->
+
+<div class="settings-box">
+
+<h2>
+
+<i class="fa-solid fa-database"></i>
+
+Data Management
+
+</h2>
+
+<div class="action-buttons">
+
+<button onclick="backupData()">
+
+<i class="fa-solid fa-download"></i>
+
+Backup Data
+
+</button>
+
+<button onclick="restoreData()">
+
+<i class="fa-solid fa-upload"></i>
+
+Restore Data
+
+</button>
+
+<input
+type="file"
+id="restoreFile"
+accept=".json"
+hidden>
+
+<button class="danger"
+onclick="clearSystem()">
+
+<i class="fa-solid fa-trash"></i>
+
+Clear All Data
+
+</button>
+
+</div>
+
+</div>
+
+<!-- SYSTEM -->
+
+<div class="settings-box">
+
+<h2>
+
+<i class="fa-solid fa-circle-info"></i>
+
+System Information
+
+</h2>
+
+<p><strong>System:</strong> School Management System</p>
+
+<p><strong>Version:</strong> 1.0.0</p>
+
+<p><strong>Developer:</strong> Khadar Updy</p>
+
+<p><strong>Year:</strong> 2026</p>
+
+</div>
+
+<footer>
+
+© 2026 SOM ACADEMY | Settings Management
+
+</footer>
+
+</div>
+
+<script src="js/settings.js"></script>
+
+</body>
+
+</html>

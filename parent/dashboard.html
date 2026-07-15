@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | Parent Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= Sidebar ================= -->
+
+<div class="sidebar">
+
+<div class="brand">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Parent Portal</p>
+
+</div>
+
+<ul>
+
+<li class="active">
+<a href="dashboard.html">
+<i class="fa fa-home"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="profile.html">
+<i class="fa fa-user"></i>
+My Profile
+</a>
+</li>
+
+<li>
+<a href="child.html">
+<i class="fa fa-child"></i>
+My Child
+</a>
+</li>
+
+<li>
+<a href="attendance.html">
+<i class="fa fa-calendar-check"></i>
+Attendance
+</a>
+</li>
+
+<li>
+<a href="results.html">
+<i class="fa fa-graduation-cap"></i>
+Results
+</a>
+</li>
+
+<li>
+<a href="fees.html">
+<i class="fa fa-wallet"></i>
+Fees
+</a>
+</li>
+
+<li>
+<a href="messages.html">
+<i class="fa fa-envelope"></i>
+Messages
+</a>
+</li>
+
+<li>
+<a href="#" onclick="logout()">
+<i class="fa fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<!-- ================= Main ================= -->
+
+<div class="main">
+
+<!-- Header -->
+
+<div class="header">
+
+<div>
+
+<h2>Parent Dashboard</h2>
+
+<p id="clock"></p>
+
+</div>
+
+<div class="user-box">
+
+<img id="parentPhoto" src="../images/avatar.png">
+
+<div>
+
+<h4 id="parentName">
+Parent
+</h4>
+
+<p>Online</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Welcome -->
+
+<div class="welcome">
+
+<div>
+
+<h1>
+
+Welcome,
+
+<span id="welcomeParent">
+
+Parent
+
+</span>
+
+</h1>
+
+<p>
+
+Monitor your child's academic progress.
+
+</p>
+
+</div>
+
+<i class="fa fa-user-group"></i>
+
+</div>
+
+<!-- Statistics -->
+
+<div class="stats">
+
+<div class="card">
+
+<i class="fa fa-child"></i>
+
+<div>
+
+<h3>Student</h3>
+
+<h1 id="childName">
+-
+</h1>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<i class="fa fa-calendar-check"></i>
+
+<div>
+
+<h3>Attendance</h3>
+
+<h1 id="attendancePercent">
+0%
+</h1>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<i class="fa fa-file-lines"></i>
+
+<div>
+
+<h3>Results</h3>
+
+<h1 id="resultCount">
+0
+</h1>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<i class="fa fa-wallet"></i>
+
+<div>
+
+<h3>Fees</h3>
+
+<h1 id="feesStatus">
+Paid
+</h1>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Content -->
+
+<div class="content-grid">
+
+<div class="panel">
+
+<h2>Latest Results</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Subject</th>
+
+<th>Marks</th>
+
+<th>Grade</th>
+
+</tr>
+
+</thead>
+
+<tbody id="resultTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="panel">
+
+<h2>Announcements</h2>
+
+<div id="announcements">
+
+<p>📢 Welcome to SOM ACADEMY.</p>
+
+<p>📢 Parents Meeting this Friday.</p>
+
+<p>📢 Exams begin next month.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Quick Actions -->
+
+<div class="quick">
+
+<h2>Quick Actions</h2>
+
+<a href="attendance.html">
+
+<i class="fa fa-calendar-check"></i>
+
+Attendance
+
+</a>
+
+<a href="results.html">
+
+<i class="fa fa-file-lines"></i>
+
+Results
+
+</a>
+
+<a href="fees.html">
+
+<i class="fa fa-wallet"></i>
+
+Fees
+
+</a>
+
+</div>
+
+<footer>
+
+© 2026 SOM ACADEMY Parent Portal
+
+</footer>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | My Fees</title>
+
+<link rel="stylesheet" href="css/fees.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Student Portal</p>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa fa-house"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="profile.html">
+
+<i class="fa fa-user"></i>
+
+Profile
+
+</a>
+
+</li>
+
+<li>
+
+<a href="attendance.html">
+
+<i class="fa fa-calendar-check"></i>
+
+Attendance
+
+</a>
+
+</li>
+
+<li>
+
+<a href="results.html">
+
+<i class="fa fa-graduation-cap"></i>
+
+Results
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa fa-money-bill-wave"></i>
+
+Fees
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#" onclick="logout()">
+
+<i class="fa fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+<!-- Navbar -->
+
+<div class="navbar">
+
+<h2>My School Fees</h2>
+
+<p id="clock"></p>
+
+</div>
+
+<!-- Statistics -->
+
+<div class="stats">
+
+<div class="card">
+
+<i class="fa-solid fa-money-bill"></i>
+
+<h3>Total Paid</h3>
+
+<h1 id="totalPaid">$0</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h3>Balance</h3>
+
+<h1 id="balance">$0</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h3>Status</h3>
+
+<h1 id="feeStatus">-</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-receipt"></i>
+
+<h3>Receipts</h3>
+
+<h1 id="receiptCount">0</h1>
+
+</div>
+
+</div>
+
+<!-- Search -->
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchFee"
+placeholder="Search Payment...">
+
+</div>
+
+<!-- Fees Table -->
+
+<div class="table-box">
+
+<div class="table-header">
+
+<h2>Payment History</h2>
+
+<button onclick="window.print()">
+
+<i class="fa fa-print"></i>
+
+Print
+
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Student</th>
+
+<th>Class</th>
+
+<th>Amount</th>
+
+<th>Method</th>
+
+<th>Status</th>
+
+<th>Date</th>
+
+<th>Receipt</th>
+
+</tr>
+
+</thead>
+
+<tbody id="feesTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<footer>
+
+© 2026 SOM ACADEMY Student Portal
+
+</footer>
+
+</div>
+
+<script src="js/fees.js"></script>
+
+</body>
+
+</html>

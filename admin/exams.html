@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | Exams Management</title>
+
+<link rel="stylesheet" href="css/exams.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Admin Panel</p>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa fa-gauge"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+<a href="students.html">
+<i class="fa-solid fa-user-plus"></i>
+Student Management
+</a>
+</li>
+
+<li>
+<a href="teachers.html">
+<i class="fa-solid fa-chalkboard-user"></i>
+Teacher Management
+</a>
+</li>
+
+<li>
+<a href="student-list.html">
+<i class="fa-solid fa-users"></i>
+Student List
+</a>
+</li>
+
+<li>
+<a href="teacher-list.html">
+<i class="fa-solid fa-chalkboard-user"></i>
+ Teacher List
+</a>
+</li>
+
+<li>
+<a href="classes.html">
+<i class="fa-solid fa-school"></i>
+Classes
+</a>
+</li>
+
+<li>
+
+<a href="attendance.html">
+
+<i class="fa fa-calendar-check"></i>
+
+Attendance
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa fa-file-lines"></i>
+
+Exams
+
+</a>
+
+</li>
+
+
+
+<li>
+<a href="fees.html">
+<i class="fa-solid fa-money-bill-wave"></i>
+Fees
+</a>
+</li>
+
+<li>
+<a href="reports.html">
+<i class="fa-solid fa-chart-line"></i>
+Reports
+</a>
+</li>
+
+            <li>
+                <a href="users.html">
+                    <i class="fa-solid fa-user"></i>
+                    User Management
+                </a>
+            </li>
+
+ <li >
+
+<a href="#">
+
+<i class="fa fa-bullhorn"></i>
+
+Announcements
+
+</a>
+
+</li>
+
+<li>
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+</li>
+
+<li>
+<a href="#" onclick="logout()">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+<!-- Navbar -->
+
+<div class="navbar">
+
+<h2>Exams Management</h2>
+
+<p id="clock"></p>
+
+</div>
+
+<!-- Exam Form -->
+
+<div class="form-box">
+
+<h2>Add Exam Result</h2>
+
+<div class="grid">
+
+<select id="studentSelect">
+
+<option value="">Select Student</option>
+
+</select>
+
+<input
+type="text"
+id="subject"
+placeholder="Subject">
+
+<input
+type="number"
+id="marks"
+placeholder="Marks (0-100)">
+
+<input
+type="date"
+id="examDate">
+
+<button onclick="addResult()">
+
+<i class="fa fa-save"></i>
+
+Save Result
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Search -->
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchResult"
+placeholder="Search Student..."
+onkeyup="searchResult()">
+
+
+<button onclick="searchResult()">
+
+<i class="fa fa-search"></i>
+
+Search
+
+</button>
+
+</div>
+
+<!-- Results Table -->
+
+<div class="table-box">
+
+<div class="table-header">
+
+<h2>Exam Results</h2>
+
+<button onclick="printResults()">
+
+<i class="fa fa-print"></i>
+
+Print
+
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Student</th>
+
+<th>Class</th>
+
+<th>Subject</th>
+
+<th>Marks</th>
+
+<th>Total Marks</th>
+
+<th>Grade</th>
+
+<th>Date</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="resultsTable">
+
+</tbody>
+
+
+</table>
+
+</div><!-- ========================= -->
+<!-- Statistics -->
+<!-- ========================= -->
+
+<div class="stats">
+
+
+<div class="card">
+
+<i class="fa-solid fa-file-lines"></i>
+
+<h3>Total Results</h3>
+
+<h1 id="totalResults">0</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-trophy"></i>
+
+<h3>Passed</h3>
+
+<h1 id="passed">0</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-circle-xmark"></i>
+
+<h3>Failed</h3>
+
+<h1 id="failed">0</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-chart-column"></i>
+
+<h3>Average Marks</h3>
+
+<h1 id="average">0%</h1>
+
+</div>
+
+
+</div>
+
+<!-- ========================= -->
+<!-- Exam Report -->
+<!-- ========================= -->
+
+<div class="report-box">
+
+<h2>Exam Report</h2>
+
+<p>
+
+Total Students :
+
+<strong id="reportStudents">
+
+0
+
+</strong>
+
+</p>
+
+<p>
+
+Results Entered :
+
+<strong id="reportResults">
+
+0
+
+</strong>
+
+</p>
+
+<p>
+
+Passed :
+
+<strong id="reportPass">
+
+0
+
+</strong>
+
+</p>
+
+<p>
+
+Failed :
+
+<strong id="reportFail">
+
+0
+
+</strong>
+
+</p>
+
+</div>
+
+<!-- ========================= -->
+<!-- Footer -->
+<!-- ========================= -->
+
+<footer>
+
+<p>
+
+© 2026 SOM ACADEMY School Management System
+
+</p>
+
+</footer>
+
+</div>
+
+<script src="js/exams.js"></script>
+
+</body>
+
+</html>

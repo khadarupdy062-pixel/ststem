@@ -1,0 +1,618 @@
+/* ==========================================
+   SOM ACADEMY - STUDENT MANAGEMENT
+========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#eef2f7;
+display:flex;
+}
+
+/* ================= Sidebar ================= */
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+width:260px;
+height:100vh;
+background:#1f4c7c;
+overflow:auto;
+}
+
+.logo{
+padding:25px;
+text-align:center;
+color:#fff;
+border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.logo h2{
+font-size:28px;
+}
+
+.logo p{
+margin-top:8px;
+font-size:14px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar ul li{
+margin:5px 0;
+}
+
+.sidebar ul li a{
+display:block;
+padding:15px 25px;
+color:#fff;
+text-decoration:none;
+transition:.3s;
+}
+
+.sidebar ul li a i{
+width:25px;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active{
+background:#16385b;
+}
+
+/* ================= Main ================= */
+
+.main{
+margin-left:260px;
+width:calc(100% - 260px);
+padding:25px;
+}
+
+/* ================= Navbar ================= */
+
+.navbar{
+background:#fff;
+padding:18px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+margin-bottom:30px;
+}
+
+.navbar h2{
+color:#1f4c7c;
+}
+
+#clock{
+font-weight:bold;
+color:#555;
+}
+
+/* ================= Form ================= */
+
+.form-box{
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+margin-bottom:25px;
+}
+
+.form-box h2{
+margin-bottom:20px;
+color:#1f4c7c;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.grid input,
+.grid select{
+width:100%;
+padding:14px;
+border:1px solid #ccc;
+border-radius:8px;
+outline:none;
+font-size:15px;
+transition:.3s;
+}
+
+.grid input:focus,
+.grid select:focus{
+border-color:#1f4c7c;
+box-shadow:0 0 5px rgba(31,76,124,.3);
+}/* ================= Buttons ================= */
+
+.buttons{
+display:flex;
+gap:15px;
+margin-top:20px;
+}
+
+.buttons button{
+padding:14px 25px;
+border:none;
+border-radius:8px;
+font-size:15px;
+cursor:pointer;
+transition:.3s;
+}
+
+.save{
+background:#1f4c7c;
+color:#fff;
+}
+
+.save:hover{
+background:#16385b;
+}
+
+.reset{
+background:#dc3545;
+color:#fff;
+}
+
+.reset:hover{
+background:#b52b38;
+}
+
+/* ================= Search ================= */
+
+.search-box{
+background:#fff;
+padding:20px;
+margin-bottom:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+display:flex;
+gap:15px;
+}
+
+.search-box input{
+flex:1;
+padding:14px;
+border:1px solid #ccc;
+border-radius:8px;
+outline:none;
+font-size:15px;
+}
+
+.search-box input:focus{
+border-color:#1f4c7c;
+}
+
+.search-box button{
+padding:14px 25px;
+border:none;
+background:#1f4c7c;
+color:#fff;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+.search-box button:hover{
+background:#16385b;
+}
+
+/* ================= Table ================= */
+
+.table-box{
+background:#fff;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+overflow-x:auto;
+}
+
+.table-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+.table-header h2{
+color:#1f4c7c;
+}
+
+#printBtn{
+background:#28a745;
+color:#fff;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+#printBtn:hover{
+background:#218838;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+table th{
+background:#1f4c7c;
+color:white;
+padding:14px;
+text-align:center;
+}
+
+table td{
+padding:12px;
+text-align:center;
+border-bottom:1px solid #ddd;
+}
+
+table tbody tr:hover{
+background:#f5f5f5;
+}/* ================= Student Photo ================= */
+
+.student-photo{
+width:50px;
+height:50px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid #1f4c7c;
+}
+
+/* ================= Status ================= */
+
+.status-active{
+background:#28a745;
+color:#fff;
+padding:5px 12px;
+border-radius:20px;
+font-size:13px;
+font-weight:bold;
+}
+
+.status-inactive{
+background:#dc3545;
+color:#fff;
+padding:5px 12px;
+border-radius:20px;
+font-size:13px;
+font-weight:bold;
+}
+
+/* ================= Action Buttons ================= */
+
+.edit-btn{
+background:#ffc107;
+color:#000;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+margin-right:5px;
+transition:.3s;
+}
+
+.edit-btn:hover{
+background:#e0a800;
+}
+
+.delete-btn{
+background:#dc3545;
+color:#fff;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+transition:.3s;
+}
+
+.delete-btn:hover{
+background:#b52b38;
+}
+
+/* ================= Modal ================= */
+
+.modal{
+display:none;
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.5);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.modal-content{
+background:#fff;
+width:500px;
+max-width:95%;
+padding:25px;
+border-radius:10px;
+position:relative;
+}
+
+.modal-content h2{
+margin-bottom:20px;
+color:#1f4c7c;
+}
+
+.modal-content input,
+.modal-content select{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+outline:none;
+}
+
+.modal-content button{
+width:100%;
+padding:14px;
+background:#1f4c7c;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.modal-content button:hover{
+background:#16385b;
+}
+
+.close{
+position:absolute;
+right:20px;
+top:15px;
+font-size:28px;
+cursor:pointer;
+color:#666;
+}
+
+.close:hover{
+color:red;
+}
+
+/* ================= Footer ================= */
+
+footer{
+margin-top:30px;
+background:#fff;
+padding:18px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+color:#666;
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:992px){
+
+.sidebar{
+width:100%;
+height:auto;
+position:relative;
+}
+
+.main{
+margin-left:0;
+width:100%;
+}
+
+.search-box{
+flex-direction:column;
+}
+
+.buttons{
+flex-direction:column;
+}
+
+.table-header{
+flex-direction:column;
+gap:15px;
+}
+
+.navbar{
+flex-direction:column;
+text-align:center;
+gap:10px;
+}
+
+}
+
+@media(max-width:600px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+table{
+font-size:13px;
+}
+
+.student-photo{
+width:40px;
+height:40px;
+}
+
+}/* ================= Mobile ================= */
+
+@media(max-width:900px){
+
+.sidebar{
+width:80px;
+}
+
+.brand h2,
+.brand p,
+.sidebar a{
+font-size:0;
+}
+
+.sidebar i{
+font-size:20px;
+}
+
+.main{
+margin-left:80px;
+width:calc(100% - 80px);
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.content-grid{
+grid-template-columns:1fr;
+}
+
+.welcome{
+flex-direction:column;
+text-align:center;
+}
+
+.welcome i{
+margin-top:20px;
+}
+
+}
+/* ================= MOBILE ================= */
+
+
+@media(max-width:900px){
+
+
+.sidebar{
+
+    width:80px;
+
+}
+
+
+
+.logo h2,
+.logo p{
+
+    display:none;
+
+}
+
+
+
+.sidebar ul li a{
+
+    justify-content:center;
+    font-size:0;
+
+}
+
+
+
+.main{
+
+    margin-left:80px;
+    width:calc(100% - 80px);
+
+}
+
+
+
+.report-cards{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.filter-box select,
+.filter-box button{
+
+    width:100%;
+    margin:5px 0;
+
+}
+
+
+
+.table-box{
+
+    overflow-x:auto;
+
+}
+
+
+
+table{
+
+    min-width:700px;
+
+}
+
+
+}/* MOBILE */
+
+@media(max-width:768px){
+
+.main{
+
+margin-left:0;
+padding:15px;
+
+}
+
+.profile-card{
+
+padding:25px;
+
+}
+
+.photo{
+
+width:120px;
+height:120px;
+
+}
+
+}/* MOBILE */
+
+@media(max-width:768px){
+
+.main{
+
+margin-left:0;
+padding:15px;
+
+}
+
+.profile-card{
+
+padding:25px;
+
+}
+
+.photo{
+
+width:120px;
+height:120px;
+
+}
+
+}

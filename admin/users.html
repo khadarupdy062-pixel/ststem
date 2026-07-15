@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | User Management</title>
+
+<link rel="stylesheet" href="css/users.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Admin Panel</p>
+
+</div>
+
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+<i class="fa fa-gauge"></i>
+Dashboard
+</a>
+</li>
+
+
+<li class="active">
+<a href="#">
+<i class="fa fa-users"></i>
+User Management
+</a>
+</li>
+
+
+<li>
+<a href="students.html">
+<i class="fa fa-user-graduate"></i>
+Students
+</a>
+</li>
+
+
+<li>
+<a href="teachers.html">
+<i class="fa fa-chalkboard-user"></i>
+Teachers
+</a>
+</li>
+
+
+<li>
+<a href="#" onclick="logout()">
+<i class="fa fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<!-- MAIN -->
+
+<div class="main">
+
+
+<div class="navbar">
+
+<h2>User Management</h2>
+
+<p id="clock"></p>
+
+</div>
+
+
+
+
+
+<!-- ADD USER -->
+
+
+<div class="form-box">
+
+
+<h2>Create Profile</h2>
+
+
+<div class="grid">
+
+
+<input 
+type="text"
+id="name"
+placeholder="Full Name">
+
+
+
+<input
+type="email"
+id="email"
+placeholder="Email">
+
+
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+
+
+<select id="role">
+
+
+<option value="">
+Select Role
+</option>
+
+
+<option>
+Student
+</option>
+
+
+<option>
+Teacher
+</option>
+
+
+<option>
+Parent
+</option>
+
+
+</select>
+
+
+
+<button onclick="addUser()">
+
+<i class="fa fa-save"></i>
+
+Save User
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- SEARCH -->
+
+
+<div class="search-box">
+
+
+<input 
+type="text"
+id="search"
+placeholder="Search User...">
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- TABLE -->
+
+
+<div class="table-box">
+
+
+<h2>All Users</h2>
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Password</th>
+
+<th>Role</th>
+
+<th>Action</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="userTable">
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+<footer>
+
+© 2026 SOM ACADEMY Management System
+
+</footer>
+
+
+
+</div>
+
+
+
+
+
+<script src="js/users.js"></script>
+
+
+</body>
+
+</html>

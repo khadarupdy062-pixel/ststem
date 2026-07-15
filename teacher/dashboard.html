@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | Teacher Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+
+<div class="brand">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Teacher Panel</p>
+
+</div>
+
+
+
+<ul>
+
+
+<li class="active">
+
+<a href="dashboard.html">
+
+<i class="fa fa-home"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="profile.html">
+
+<i class="fa fa-user"></i>
+
+My Profile
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="students.html">
+
+<i class="fa fa-users"></i>
+
+My Students
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="attendance.html">
+
+<i class="fa fa-calendar-check"></i>
+
+Attendance
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="exams.html">
+
+<i class="fa fa-file-lines"></i>
+
+Exams
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="schedule.html">
+
+<i class="fa fa-calendar"></i>
+
+Schedule
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="messages.html">
+
+<i class="fa fa-envelope"></i>
+
+Messages
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="#" onclick="logout()">
+
+<i class="fa fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<!-- MAIN -->
+
+<div class="main">
+
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+
+<div>
+
+<h2>Teacher Dashboard</h2>
+
+<p id="clock"></p>
+
+</div>
+
+
+
+
+<div class="user-box">
+
+
+<img id="teacherPhoto"
+src="../images/avatar.png">
+
+
+
+<div>
+
+<h4 id="teacherName">
+
+Teacher
+
+</h4>
+
+
+<p>
+
+Online
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- WELCOME -->
+
+
+<div class="welcome">
+
+
+<h1>
+
+Welcome Back,
+
+<span id="welcomeName">
+
+Teacher
+
+</span>
+
+</h1>
+
+
+<p>
+
+Manage your classes and students easily
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- STATISTICS -->
+
+
+<div class="stats">
+
+
+
+<div class="card">
+
+<i class="fa fa-users"></i>
+
+<div>
+
+<h3>Students</h3>
+
+<h1 id="totalStudents">
+0
+</h1>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<i class="fa fa-school"></i>
+
+<div>
+
+<h3>Classes</h3>
+
+<h1 id="totalClasses">
+0
+</h1>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<i class="fa fa-file-lines"></i>
+
+<div>
+
+<h3>Exams</h3>
+
+<h1 id="totalExams">
+0
+</h1>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<i class="fa fa-calendar-check"></i>
+
+<div>
+
+<h3>Attendance</h3>
+
+<h1 id="totalAttendance">
+0
+</h1>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- CONTENT -->
+
+
+<div class="content-grid">
+
+
+
+<div class="panel">
+
+
+<h2>
+
+Recent Students
+
+</h2>
+
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Class</th>
+
+</tr>
+
+</thead>
+
+
+
+<tbody id="studentTable">
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+<div class="panel">
+
+
+<h2>
+
+Quick Actions
+
+</h2>
+
+
+<a href="attendance.html">
+
+<i class="fa fa-calendar-check"></i>
+
+Take Attendance
+
+</a>
+
+
+
+<a href="exams.html">
+
+<i class="fa fa-file"></i>
+
+Add Results
+
+</a>
+
+
+
+<a href="students.html">
+
+<i class="fa fa-users"></i>
+
+View Students
+
+</a>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<footer>
+
+© 2026 SOM ACADEMY Teacher Portal
+
+</footer>
+
+
+
+</div>
+
+
+
+
+
+<script src="js/dashboard.js"></script>
+
+
+</body>
+
+</html>

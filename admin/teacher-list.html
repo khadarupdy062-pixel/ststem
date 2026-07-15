@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOM ACADEMY | Teacher List</title>
+
+<link rel="stylesheet" href="css/teacher-list.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+
+<div class="logo">
+
+<h2>SOM ACADEMY</h2>
+
+<p>Admin Panel</p>
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa fa-gauge"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="students.html">
+
+<i class="fa fa-user-plus"></i>
+
+Student Management
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="teachers.html">
+
+<i class="fa-solid fa-chalkboard-user"></i>
+
+Teacher Management
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="student-list.html">
+
+<i class="fa-solid fa-users"></i>
+
+Student List
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa-solid fa-users"></i>
+
+Teacher List
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="classes.html">
+
+<i class="fa-solid fa-school"></i>
+
+Classes
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="attendance.html">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Attendance
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="exams.html">
+
+<i class="fa-solid fa-file-lines"></i>
+
+Exams
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="fees.html">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+Fees
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="reports.html">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Reports
+
+</a>
+
+</li>
+
+
+            <li>
+                <a href="users.html">
+                    <i class="fa-solid fa-user"></i>
+                    User Management
+                </a>
+            </li>
+
+ <li >
+
+<a href="#">
+
+<i class="fa fa-bullhorn"></i>
+
+Announcements
+
+</a>
+
+</li>
+
+<li>
+
+<a href="settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="#" onclick="logout()">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<!-- Main -->
+
+
+<div class="main">
+
+
+<div class="navbar">
+
+
+<h2>Teachers List</h2>
+
+
+<p id="clock"></p>
+
+
+</div>
+
+
+
+
+
+<!-- Search + Buttons -->
+
+
+<div class="top-bar">
+
+
+<input
+
+type="text"
+
+id="search"
+
+placeholder="Search Teacher...">
+
+
+
+<button id="printBtn">
+
+<i class="fa fa-print"></i>
+
+Print
+
+</button>
+
+
+
+<button id="pdfBtn">
+
+<i class="fa fa-file-pdf"></i>
+
+PDF
+
+</button>
+
+
+
+<button id="excelBtn">
+
+<i class="fa fa-file-excel"></i>
+
+Excel
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Table -->
+
+
+<div class="table-box">
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+
+<th>Photo</th>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Phone</th>
+
+<th>Subject</th>
+
+<th>Qualification</th>
+
+<th>Gender</th>
+
+<th>Join Date</th>
+
+<th>Status</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="teacherList">
+
+
+<!-- Data From LocalStorage -->
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Statistics -->
+
+
+<div class="stats">
+
+
+<div class="card">
+
+
+<i class="fa-solid fa-chalkboard-user"></i>
+
+
+<h3>Total Teachers</h3>
+
+
+<h1 id="totalTeachers">0</h1>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<i class="fa-solid fa-book"></i>
+
+
+<h3>Total Subjects</h3>
+
+
+<h1 id="totalSubjects">0</h1>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<i class="fa-solid fa-user-check"></i>
+
+
+<h3>Active Teachers</h3>
+
+
+<h1 id="activeTeachers">0</h1>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<i class="fa-solid fa-user"></i>
+
+
+<h3>Male Teachers</h3>
+
+
+<h1 id="maleTeachers">0</h1>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Footer -->
+
+
+<footer>
+
+
+<p>
+
+© 2026 SOM ACADEMY School Management System
+
+</p>
+
+
+</footer>
+
+
+
+</div>
+
+
+
+
+
+<script src="js/teacher-list.js"></script>
+
+
+</body>
+
+</html>

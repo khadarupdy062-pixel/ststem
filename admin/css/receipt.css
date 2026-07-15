@@ -1,0 +1,232 @@
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+
+}
+
+
+
+body{
+
+background:#eef2f7;
+display:flex;
+justify-content:center;
+padding:40px;
+
+}
+
+
+
+.receipt{
+
+background:white;
+width:450px;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+
+
+.school{
+
+text-align:center;
+color:#1f4c7c;
+
+}
+
+
+
+.school h1{
+
+font-size:30px;
+
+}
+
+
+
+.school p{
+
+margin-top:10px;
+
+}
+
+
+
+hr{
+
+margin:20px 0;
+
+}
+
+
+
+.details p{
+
+padding:8px 0;
+font-size:16px;
+
+}
+
+
+
+.footer{
+
+text-align:center;
+
+}
+
+
+
+.footer button{
+
+margin-top:20px;
+padding:12px 25px;
+background:#1f4c7c;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+
+}
+
+
+
+@media print{
+
+
+.footer button{
+
+display:none;
+
+}
+
+
+body{
+
+background:white;
+
+}
+
+
+.receipt{
+
+box-shadow:none;
+
+}
+
+
+}/* ================= BACK BUTTON ================= */
+
+
+.back-btn{
+
+    width:459px;
+    margin-bottom:15px;
+
+}
+
+
+
+.back-btn a{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    background:#1f4c7c;
+    color:white;
+    padding:12px 20px;
+    border-radius:8px;
+    font-size:16px;
+    transition:.3s;
+
+}
+
+
+
+.back-btn a:hover{
+
+    background:#163858;
+    transform:translateX(-10px);
+
+}
+/* ================= BODY ================= */
+
+body{
+
+    background:#eef2f7;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:100vh;
+    padding:40px;
+
+}
+
+
+
+/* ================= BACK BUTTON ================= */
+
+
+.back-btn a{
+
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+
+    text-decoration:none;
+
+    background:#1f4c7c;
+    color:white;
+
+    padding:6px 10px;
+
+    border-radius:5px;
+
+    font-size:12px;
+
+    height:35px;
+
+    width:auto;
+
+}
+.back-btn{
+
+    position:fixed;
+    top:15px;
+    left:15px;
+
+}
+
+
+
+.back-btn a:hover{
+
+    background:#163858;
+
+}
+
+
+
+
+/* ================= RECEIPT CENTER ================= */
+
+
+.receipt{
+
+    background:white;
+
+    width:450px;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
